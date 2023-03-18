@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="737.0" prefWidth="593.0" stylesheets="@myStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LabActivity3Controller">
+   <children>
+      <HBox id="hbox" fx:id="hBox1" alignment="CENTER" layoutY="40.0" prefHeight="61.0" prefWidth="593.0" spacing="25.0">
+         <children>
+            <HBox fx:id="genderHbox" alignment="CENTER" prefHeight="45.0" prefWidth="232.0" spacing="6.0">
+               <children>
+                  <Label fx:id="genderLabel" text="Gender: " />
+                  <RadioButton fx:id="radioButton1" mnemonicParsing="false" text="Male">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="toggleGroup" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="radioButton2" mnemonicParsing="false" text="Female" toggleGroup="$toggleGroup" />
+               </children>
+            </HBox>
+            <HBox fx:id="comboBoxhBox" alignment="CENTER" prefHeight="45.0" prefWidth="268.0" spacing="6.0">
+               <children>
+                  <Label fx:id="comboBoxLabel" text="Department: " />
+                  <ChoiceBox fx:id="comboBox" prefWidth="150.0" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox id="checkBoxHbox" fx:id="checkBoxHbox" layoutY="115.0" prefHeight="209.0" prefWidth="593.0" spacing="6.0">
+         <children>
+            <Label fx:id="checkBoxLabel" text="Programming Languages: " />
+            <VBox fx:id="checkBoxes" alignment="CENTER_LEFT" prefHeight="183.0" prefWidth="84.0" spacing="1.0">
+               <children>
+                  <CheckBox fx:id="checkBox1" mnemonicParsing="false" onAction="#checkBox1Event" text="Java" />
+                  <CheckBox fx:id="checkBox2" layoutX="24.0" layoutY="93.0" mnemonicParsing="false" onAction="#checkBox1Event" text="C" />
+                  <CheckBox fx:id="checkBox3" layoutX="24.0" layoutY="102.0" mnemonicParsing="false" onAction="#checkBox1Event" text="C++" />
+                  <CheckBox fx:id="checkBox4" layoutX="24.0" layoutY="93.0" mnemonicParsing="false" onAction="#checkBox1Event" text="C#" />
+                  <CheckBox fx:id="checkBox5" layoutX="24.0" layoutY="75.0" mnemonicParsing="false" onAction="#checkBox1Event" text="PHP" />
+                  <CheckBox fx:id="checkBox6" layoutX="24.0" layoutY="111.0" mnemonicParsing="false" onAction="#checkBox1Event" text="JS" />
+                  <CheckBox fx:id="checkBox7" layoutX="24.0" layoutY="48.0" mnemonicParsing="false" onAction="#checkBox1Event" text="Python" />
+               </children>
+            </VBox>
+            <ListView fx:id="checkBoxListView" prefHeight="81.0" prefWidth="153.0" />
+         </children>
+      </HBox>
+      <HBox id="hbox" fx:id="hBox2" layoutX="-1.0" layoutY="339.0" prefHeight="197.0" prefWidth="593.0" spacing="20.0">
+         <children>
+            <ListView fx:id="listView1" prefHeight="157.0" prefWidth="154.0" />
+            <ListView fx:id="listView2" prefHeight="157.0" prefWidth="164.0" />
+         </children>
+      </HBox>
+      <VBox id="ageSlider" fx:id="ageSlider" layoutX="-1.0" layoutY="551.0" prefHeight="98.0" prefWidth="593.0" spacing="5.0">
+         <children>
+            <Label fx:id="age" text="Age: " />
+            <Slider fx:id="slider" blockIncrement="5.0" majorTickUnit="10.0" max="65.0" min="15.0" onMouseExited="#ageEvent" showTickLabels="true" showTickMarks="true" value="25.0" />
+         </children>
+      </VBox>
+      <TextArea fx:id="textArea" editable="false" layoutY="657.0" prefHeight="80.0" prefWidth="593.0" text="Ahmad_Alketnani  120200317" />
+      <MenuBar fx:id="menuBar" prefHeight="32.0" prefWidth="593.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+              <items>
+                <MenuItem fx:id="open" mnemonicParsing="false" onAction="#fileEvent" text="Open" />
+                  <MenuItem fx:id="save" mnemonicParsing="false" text="Save" />
+                  <SeparatorMenuItem fx:id="separatorFile" mnemonicParsing="false" />
+                  <Menu fx:id="subMenu" mnemonicParsing="false" text="Sub Menu">
+                    <items>
+                      <MenuItem fx:id="item1" mnemonicParsing="false" text="Item 1" />
+                        <MenuItem fx:id="item2" mnemonicParsing="false" text="Item 2" />
+                    </items>
+                  </Menu>
+              </items>
+            </Menu>
+            <Menu fx:id="editMenu" mnemonicParsing="false" text="Edit">
+               <items>
+                  <CheckMenuItem fx:id="item1Edit" mnemonicParsing="false" text="Item 1" />
+                  <CheckMenuItem fx:id="item2Edit" mnemonicParsing="false" text="Item 2" />
+                  <SeparatorMenuItem fx:id="separatorEdit" mnemonicParsing="false" />
+                  <RadioMenuItem fx:id="radioItem1Edit" mnemonicParsing="false" text="Radio Item 1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="toggleGroup1" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem fx:id="radioItem2Edit" mnemonicParsing="false" text="Radio Item 2" toggleGroup="$toggleGroup1" />
+                  <RadioMenuItem fx:id="radioItem3Edit" mnemonicParsing="false" text="Radio Item 3" toggleGroup="$toggleGroup1" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
